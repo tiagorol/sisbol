@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t(:name) %></strong>
+  <%= @championship.name %>
+</p>
+
+<p>
+  <strong><%= t(:start) %></strong>
+  <%= l(@championship.start) %>
+</p>
+
+<p>
+  <strong><%= t(:end) %></strong>
+  <%= l(@championship.end) %>
+</p>
+
+<%= link_to t(:edit), edit_championship_path(@championship) %> |
+<%= link_to t(:back), championships_path %>

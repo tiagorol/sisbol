@@ -1,0 +1,17 @@
+---
+en:
+  name: Name
+  start: Start
+  end: End
+  show: Show
+  back: Back
+  editingChampionship: Editing Championship
+  listingChampionships: Listing Championships
+  newChampionship: New Championship
+  destroy: Destroy
+  edit: Edit
+  warnSave: prohibited this round from being saved
+  confirmMessage: Are you sure?
+  newRound: New Round
+  editingRound: Editing Round
+  listingRounds: Listing Rounds

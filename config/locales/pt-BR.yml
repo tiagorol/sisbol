@@ -1,0 +1,17 @@
+---
+pt-BR:
+  name: Nome
+  start: Inicio
+  end: Fim
+  show: Visualizar
+  back: Voltar
+  editingChampionship: Editando Campeonato
+  listingChampionships: Lista de Campeonatos
+  newChampionship: Novo Campeonato
+  destroy: Deletar
+  edit: Editar
+  warnSave: objeto nao pode ser salvo pois
+  editingRound: Editando Rodada
+  confirmMessage: Voce tem certeza disso?
+  newRound: Nova Rodada
+  listingRounds: Lista de Rodadas

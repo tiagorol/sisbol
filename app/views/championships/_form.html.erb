@@ -1,0 +1,29 @@
+<%= form_for(@championship) do |f| %>
+  <% if @championship.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@championship.errors.count, "error") %> <%= t(:warnSave) %>:</h2>
+
+      <ul>
+      <% @championship.errors.full_messages.each do |message| %>
+        <li><%= t(message) %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label t(:name) %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label t(:start) %><br>
+    <%= f.date_select :start %>
+  </div>
+  <div class="field">
+    <%= f.label t(:end) %><br>
+    <%= f.date_select :end %>
+  </div>
+  <div class="actions" id="teste">
+    <%= f.submit %>
+  </div>
+<% end %>

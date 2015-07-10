@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong><%= t(:name) %></strong>
+  <%= @round.name %>
+</p>
+
+<%= link_to t(:edit), edit_round_path(@round) %> |
+<%= link_to t(:back), rounds_path %>
