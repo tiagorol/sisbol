@@ -25,6 +25,9 @@ pt-BR:
   newChampionship: Novo Campeonato
   newRound: Nova Rodada
 
+  #R
+  round: Rodada
+
   #S
   start: Inicio
   show: Visualizar
@@ -32,6 +35,7 @@ pt-BR:
 
   #W
   warnSave: objeto nao pode ser salvo pois
+  welcome_message: Bem vindo ao Bolao
 
 
 

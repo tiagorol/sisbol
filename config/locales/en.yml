@@ -25,6 +25,9 @@ en:
   newChampionship: New Championship
   newRound: New Round
 
+  #R
+  round: Round
+
   #S
   start: Start
   show: Show
@@ -32,6 +35,7 @@ en:
 
   #W
   warnSave: prohibited this round from being saved
+  welcome_message: Welcome Bolao
 
 
 
