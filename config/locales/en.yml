@@ -4,6 +4,8 @@ en:
   back: Back
 
   #C
+  createRound: Create Round
+  createChampionship: Create Championship
   confirmMessage: Are you sure?
   championship: Championship
 

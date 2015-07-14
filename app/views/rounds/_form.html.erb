@@ -20,6 +20,6 @@
     <%=	f.collection_select(:championship_id, @championships, :id, :name, prompt: t(:select)) %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit t(:createRound) %>
   </div>
 <% end %>
