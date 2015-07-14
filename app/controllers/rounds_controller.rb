@@ -1,6 +1,6 @@
 class RoundsController < ApplicationController
   before_action :set_round, only: [:show, :edit, :update, :destroy]
-  before_action :load_championships, only: [:new, :edit]
+  before_action :load_championships, only: [:new, :edit, :create, :update]
 
   # GET /rounds
   # GET /rounds.json
@@ -32,7 +32,6 @@ class RoundsController < ApplicationController
         format.html { redirect_to @round, notice: 'Round was successfully created.' }
         format.json { render :show, status: :created, location: @round }
       else
-        load_championships
         format.html { render :new }
         format.json { render json: @round.errors, status: :unprocessable_entity }
       end
