@@ -1,5 +1,6 @@
 class RoundsController < ApplicationController
   before_action :set_round, only: [:show, :edit, :update, :destroy]
+  before_action :load_championships, only: [:new, :edit]
 
   # GET /rounds
   # GET /rounds.json
@@ -31,6 +32,7 @@ class RoundsController < ApplicationController
         format.html { redirect_to @round, notice: 'Round was successfully created.' }
         format.json { render :show, status: :created, location: @round }
       else
+        load_championships
         format.html { render :new }
         format.json { render json: @round.errors, status: :unprocessable_entity }
       end
@@ -69,6 +71,10 @@ class RoundsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def round_params
-      params.require(:round).permit(:name)
+      params.require(:round).permit(:name, :championship_id)
+    end
+
+    def load_championships
+      @championships = Championship.all
     end
 end

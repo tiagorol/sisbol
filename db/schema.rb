@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150706230059) do
+ActiveRecord::Schema.define(version: 20150712112900) do
 
   create_table "championships", force: :cascade do |t|
     t.string   "name",       limit: 255, null: false
@@ -22,9 +22,13 @@ ActiveRecord::Schema.define(version: 20150706230059) do
   end
 
   create_table "rounds", force: :cascade do |t|
-    t.string   "name",       limit: 20, null: false
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.string   "name",            limit: 20, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.integer  "championship_id", limit: 4,  null: false
   end
 
+  add_index "rounds", ["championship_id"], name: "index_rounds_on_championship_id", using: :btree
+
+  add_foreign_key "rounds", "championships"
 end

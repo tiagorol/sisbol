@@ -1,17 +1,37 @@
 ---
 pt-BR:
-  name: Nome
-  start: Inicio
-  end: Fim
-  show: Visualizar
+  #B
   back: Voltar
-  editingChampionship: Editando Campeonato
-  listingChampionships: Lista de Campeonatos
-  newChampionship: Novo Campeonato
-  destroy: Deletar
-  edit: Editar
-  warnSave: objeto nao pode ser salvo pois
-  editingRound: Editando Rodada
+
+  #C
   confirmMessage: Voce tem certeza disso?
-  newRound: Nova Rodada
+  championship: Campeonato
+
+  #D
+  destroy: Deletar
+
+  #E
+  end: Fim
+  edit: Editar
+  editingChampionship: Editando Campeonato
+  editingRound: Editando Rodada
+
+  #L
   listingRounds: Lista de Rodadas
+  listingChampionships: Lista de Campeonatos
+
+  #N
+  name: Nome
+  newChampionship: Novo Campeonato
+  newRound: Nova Rodada
+
+  #S
+  start: Inicio
+  show: Visualizar
+  select: Selecione
+
+  #W
+  warnSave: objeto nao pode ser salvo pois
+
+
+

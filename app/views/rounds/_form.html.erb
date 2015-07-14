@@ -15,6 +15,10 @@
     <%= f.label t(:name) %><br>
     <%= f.text_field :name %>
   </div>
+  <div class="field">
+    <%= f.label t(:championship) %><br>
+    <%=	f.collection_select(:championship_id, @championships, :id, :name, prompt: t(:select)) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
