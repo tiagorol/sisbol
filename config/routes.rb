@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :clubes
   resources :championships
   resources :rounds
   # The priority is based upon order of creation: first created -> highest priority.
