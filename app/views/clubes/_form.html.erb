@@ -1,0 +1,21 @@
+<%= form_for(@clube) do |f| %>
+  <% if @clube.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@clube.errors.count, "error") %> <%= t(:warnSave) %>:</h2>
+
+      <ul>
+      <% @clube.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label T(:nome) %><br>
+    <%= f.text_field :nome %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

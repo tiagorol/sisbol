@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Lista de Clubes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clubes.each do |clube| %>
+      <tr>
+        <td><%= clube.nome %></td>
+        <td><%= link_to 'Visualizar', clube %></td>
+        <td><%= link_to 'Editar', edit_clube_path(clube) %></td>
+        <td><%= link_to 'Excluir', clube, method: :delete, data: { confirm: 'Tem certeza que deseja excluir?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Clube', new_clube_path %>

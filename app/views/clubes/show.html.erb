@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @clube.nome %>
+</p>
+
+<%= link_to 'Editar', edit_clube_path(@clube) %> |
+<%= link_to 'Voltar', clubes_path %>
