@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th><%= t(:name) %></th>
+      <th><%= t(:championship) %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -14,6 +15,7 @@
     <% @rounds.each do |round| %>
       <tr>
         <td><%= round.name %></td>
+        <td><%= round.championship.name %></td>
         <td><%= link_to t(:show), round %></td>
         <td><%= link_to t(:edit), edit_round_path(round) %></td>
         <td><%= link_to t(:destroy), round, method: :delete, data: { confirm: t(:confirmMessage)} %></td>

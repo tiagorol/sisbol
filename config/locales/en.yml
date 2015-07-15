@@ -1,17 +1,43 @@
 ---
 en:
-  name: Name
-  start: Start
-  end: End
-  show: Show
+  #B
   back: Back
-  editingChampionship: Editing Championship
-  listingChampionships: Listing Championships
-  newChampionship: New Championship
-  destroy: Destroy
-  edit: Edit
-  warnSave: prohibited this round from being saved
+
+  #C
+  createRound: Create Round
+  createChampionship: Create Championship
   confirmMessage: Are you sure?
-  newRound: New Round
+  championship: Championship
+
+  #D
+  destroy: Destroy
+
+  #E
+  end: End
+  edit: Edit
+  editingChampionship: Editing Championship
   editingRound: Editing Round
+
+  #L
   listingRounds: Listing Rounds
+  listingChampionships: Listing Championships
+
+  #N
+  name: Name
+  newChampionship: New Championship
+  newRound: New Round
+
+  #R
+  round: Round
+
+  #S
+  start: Start
+  show: Show
+  select: Select
+
+  #W
+  warnSave: prohibited this round from being saved
+  welcome_message: Welcome Bolao
+
+
+

@@ -1,5 +1,6 @@
 class RoundsController < ApplicationController
   before_action :set_round, only: [:show, :edit, :update, :destroy]
+  before_action :load_championships, only: [:new, :edit, :create, :update]
 
   # GET /rounds
   # GET /rounds.json
@@ -69,6 +70,10 @@ class RoundsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def round_params
-      params.require(:round).permit(:name)
+      params.require(:round).permit(:name, :championship_id)
+    end
+
+    def load_championships
+      @championships = Championship.all
     end
 end
