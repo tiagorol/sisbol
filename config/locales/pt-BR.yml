@@ -35,6 +35,9 @@ pt-BR:
   show: Visualizar
   select: Selecione
 
+  #U
+  user: Usuario
+
   #W
   warnSave: objeto nao pode ser salvo pois
   welcome_message: Bem vindo ao Bolao
