@@ -35,6 +35,9 @@ en:
   show: Show
   select: Select
 
+  #U
+  user: Usuario
+
   #W
   warnSave: prohibited this round from being saved
   welcome_message: Welcome Bolao
