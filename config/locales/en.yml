@@ -22,6 +22,11 @@ en:
   listingRounds: Listing Rounds
   listingChampionships: Listing Championships
 
+  #M
+  messageUpdated: Record was successfully updated.
+  messageCreated: Record was successfully created.
+  messageDestroyed: Record was successfully destroyed.
+
   #N
   name: Name
   newChampionship: New Championship
