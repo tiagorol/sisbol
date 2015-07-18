@@ -1,5 +1,6 @@
 ---
 pt-BR:
+
   #B
   back: Voltar
 
@@ -25,7 +26,7 @@ pt-BR:
   #M
   messageUpdated: Registro atualizado com sucesso.
   messageCreated: Registro criado com sucesso.
-  messageDestroyed: Registro excluido com sucesso.
+  messageDestroyed: Registro excluído com sucesso.
 
   #N
   name: Nome
