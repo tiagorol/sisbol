@@ -2,7 +2,7 @@
 
 one:
   name: Rodada 1
-  championship: Championship.first
+  championship: championships(:one)
 two:
   name: Quartas de Final
-  championship: Championship.first
+  championship: championships(:two)
