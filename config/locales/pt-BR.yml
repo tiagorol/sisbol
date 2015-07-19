@@ -1,52 +1,33 @@
 ---
 pt-BR:
-
-  #B
-  back: Voltar
-
-  #C
-  createRound: Criar Rodada
-  createChampionship: Criar Campeonato
-  confirmMessage: Voce tem certeza disso?
-  championship: Campeonato
-
-  #D
-  destroy: Deletar
+  breadcrumbs:
+    application:
+      root: Início
+    pages:
+      pages: Paginas
+  helpers:
+    actions: Ações
+    links:
+      back: Voltar
+      cancel: Cancelar
+      confirm: Você tem certeza?
+      destroy: Apagar
+      new: Novo
+      edit: Editar
+    titles:
+      edit: Editar %{model}
+      save: Salvar %{model}
+      new: Novo %{model}
+      delete: Apagar %{model}
 
   #E
-  end: Fim
-  edit: Editar
-  editingChampionship: Editando Campeonato
-  editingRound: Editando Rodada
-
-  #L
-  listingRounds: Lista de Rodadas
-  listingChampionships: Lista de Campeonatos
+  error: Erro
 
   #M
-  messageUpdated: Registro atualizado com sucesso.
-  messageCreated: Registro criado com sucesso.
-  messageDestroyed: Registro excluído com sucesso.
-
-  #N
-  name: Nome
-  newChampionship: Novo Campeonato
-  newRound: Nova Rodada
-
-  #R
-  round: Rodada
-
-  #S
-  start: Inicio
-  show: Visualizar
-  select: Selecione
-
-  #U
-  user: Usuario
+  message_updated: Registro atualizado com sucesso.
+  message_created: Registro criado com sucesso.
+  message_destroyed: Registro excluído com sucesso.
 
   #W
-  warnSave: objeto nao pode ser salvo pois
-  welcome_message: Bem vindo ao Bolao
-
-
-
+  warn_save: proíbe de salvar a informação
+  welcome_message: Bem vindo ao Bolão

@@ -1,0 +1,24 @@
+---
+pt-BR:
+  activerecord:
+    models:
+      championship: Campeonato
+      round: Rodada
+      user: Usuário
+    attributes:
+      championship:
+        name: Nome
+        start: Começo
+        end: Fim
+        created_at: Criado em
+      round:
+        name: Nome
+        championship_id: Campeonato
+        created_at: Criado em
+      user:
+        name: Nome
+        surname: Sobrenome
+        date_of_birth: Data de Nascimento
+        email: Email
+        password: Senha
+        created_at: Criado em

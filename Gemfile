@@ -43,5 +43,11 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-# I18n gem
+# I18n https://github.com/svenfuchs/rails-i18n
 gem 'rails-i18n', '~> 4.0.0' # For 4.0.x
+
+# Twitter Bootstrap https://github.com/seyhunak/twitter-bootstrap-rails
+gem 'twitter-bootstrap-rails'
+
+# Bootstrap Forms https://github.com/bootstrap-ruby/rails-bootstrap-forms
+gem 'bootstrap_form'

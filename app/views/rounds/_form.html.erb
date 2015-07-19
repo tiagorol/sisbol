@@ -1,25 +1,36 @@
-<%= form_for(@round) do |f| %>
-  <% if @round.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@round.errors.count, "error") %> <%= t(:warnSave) %>:</h2>
+<%= bootstrap_form_for @round, :html => { :class => "form-horizontal round" } do |f| %>
 
-      <ul>
-      <% @round.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+    <% if @round.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@round.errors.count, "error") %> prohibited this round from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @round.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label t(:name) %><br>
-    <%= f.text_field :name %>
+  <div class="control-group">
+    <div class="controls">
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+    <%= error_span(@round[:name]) %>
   </div>
-  <div class="field">
-    <%= f.label t(:championship) %><br>
-    <%=	f.collection_select(:championship_id, @championships, :id, :name, prompt: t(:select)) %>
+  <div class="control-group">
+    <div class="controls">
+      <%= f.collection_select(:championship_id, @championships, :id, :name, prompt: t(:select)) %>
+    </div>
+    <%= error_span(@round[:championship_id]) %>
   </div>
-  <div class="actions">
-    <%= f.submit t(:createRound) %>
-  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            rounds_path, :class => 'btn btn-default' %>
+
 <% end %>
