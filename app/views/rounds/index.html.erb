@@ -17,7 +17,7 @@
       <tr>
         <td><%= link_to round.id, round_path(round) %></td>
         <td><%= round.name %></td>
-        <td><%= round.championship_id %></td>
+        <td><%= round.championship.name  %></td>
         <td><%=l round.created_at.to_date %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),

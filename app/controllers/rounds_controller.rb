@@ -5,7 +5,7 @@ class RoundsController < ApplicationController
   # GET /rounds
   # GET /rounds.json
   def index
-    @rounds = Round.all.order("name")
+    @rounds = Round.all.order(:name)
   end
 
   # GET /rounds/1

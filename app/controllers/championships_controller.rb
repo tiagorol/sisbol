@@ -4,7 +4,7 @@ class ChampionshipsController < ApplicationController
   # GET /championships
   # GET /championships.json
   def index
-    @championships = Championship.all
+    @championships = Championship.all.order(:name)
   end
 
   # GET /championships/1
