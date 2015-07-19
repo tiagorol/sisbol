@@ -74,6 +74,6 @@ class RoundsController < ApplicationController
     end
 
     def load_championships
-      @championships = Championship.all
+      @championships = Championship.all.order(:name)
     end
 end
