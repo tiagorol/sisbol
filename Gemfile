@@ -51,3 +51,6 @@ gem 'twitter-bootstrap-rails'
 
 # Bootstrap Forms https://github.com/bootstrap-ruby/rails-bootstrap-forms
 gem 'bootstrap_form'
+
+# https://github.com/thoughtbot/paperclip
+gem 'paperclip', '~> 4.3'
