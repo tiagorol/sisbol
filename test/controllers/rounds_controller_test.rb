@@ -3,6 +3,7 @@ require 'test_helper'
 class RoundsControllerTest < ActionController::TestCase
   setup do
     @round = rounds(:one)
+    @championship = championships(:one)
   end
 
   test "should get index" do
@@ -19,7 +20,7 @@ class RoundsControllerTest < ActionController::TestCase
   test "should create round" do
     assert_difference('Round.count') do
       puts Round.count
-      post :create, round: { name: @round.name, championship_id: Championship.first.id }
+      post :create, round: { name: @round.name, championship_id: @championship.id }
     end
 
     assert_redirected_to round_path(assigns(:round))
@@ -35,10 +36,10 @@ class RoundsControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  # test "should update round" do
-  #   patch :update, id: @round, round: { name: @round.name }
-  #   assert_redirected_to round_path(assigns(:round))
-  # end
+  test "should update round" do
+    patch :update, id: @round, round: { name: @round.name, championship_id: @championship.id }
+    assert_redirected_to round_path(assigns(:round))
+  end
 
   test "should destroy round" do
     assert_difference('Round.count', -1) do
