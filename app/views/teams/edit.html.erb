@@ -1,6 +1,6 @@
-<h1>Editing Team</h1>
+<%- model_class = Team -%>
 
-<%= render 'form' %>
+<h2><%=t '.title', :default => [:'helpers.titles.edit', 'Edit %{model}'], :model => model_class.model_name.human.titleize %></h2>
+<hr />
 
-<%= link_to 'Show', @team %> |
-<%= link_to 'Back', teams_path %>
+<%= render :partial => 'form' %>

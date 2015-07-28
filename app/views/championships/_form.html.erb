@@ -15,25 +15,35 @@
     </div>
   <% end %>
 
-  <div class="control-group">
-    <div class="controls">
-      <%= f.text_field :name, :class => 'form-control' %>
-    </div>
-    <%= error_span(@championship[:name]) %>
-  </div>
-  <div class="control-group">
-    <div class="controls">
-      <%= f.date_select :start, :class => 'form-control' %>
-    </div>
-    <%= error_span(@championship[:start]) %>
-  </div>
-  <div class="control-group">
-    <div class="controls">
-      <%= f.date_select :end, :class => 'form-control' %>
-    </div>
-    <%= error_span(@championship[:end]) %>
-  </div>
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      Preencha os campos abaixo
+    </div><br/>
 
-  <%= f.submit nil, :class => 'btn btn-primary' %>
-  <%= link_to t('.cancel', :default => t("helpers.links.cancel")), championships_path, :class => 'btn btn-default' %>
+      <div class="control-group">
+        <div class="controls">
+          <%= f.text_field :name, :class => 'form-control' %>
+        </div>
+        <%= error_span(@championship[:name]) %>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <%= f.date_select :start, :class => 'form-control' %>
+        </div>
+        <%= error_span(@championship[:start]) %>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <%= f.date_select :end, :class => 'form-control' %>
+        </div>
+        <%= error_span(@championship[:end]) %>
+      </div>
+
+
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")), championships_path, :class => 'btn btn-default' %>
+
+     <br/>
+     <br/>
+  </div>
 <% end %>

@@ -15,40 +15,47 @@
     </div>
   <% end %>
 
-  <div class="control-group">
-    <div class="controls">
-      <%= f.text_field :name, :class => 'form-control' %>
-    </div>
-    <%= error_span(@user[:name]) %>
-  </div>
-  <div class="control-group">
-    <div class="controls">
-      <%= f.text_field :surname, :class => 'form-control' %>
-    </div>
-    <%= error_span(@user[:surname]) %>
-  </div>
-  <div class="control-group">
-    <div class="controls">
-      <%= f.date_select :date_of_birth, :class => 'form-control' %>
-    </div>
-    <%= error_span(@user[:date_of_birth]) %>
-  </div>
-  <div class="control-group">
-    <div class="controls">
-      <%= f.email_field :email, :class => 'form-control' %>
-    </div>
-    <%= error_span(@user[:email]) %>
-  </div>
-  <div class="control-group">
-    <div class="controls">
-      <%= f.password_field :password, :class => 'form-control' %>
-    </div>
-    <%= error_span(@user[:password]) %>
-  </div>
+ <div class="panel panel-default">
+   <div class="panel-heading">
+     Preencha os campos abaixo
+  </div><br/>
 
+      <div class="control-group">
+        <div class="controls">
+          <%= f.text_field :name, :class => 'form-control' %>
+        </div>
+        <%= error_span(@user[:name]) %>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <%= f.text_field :surname, :class => 'form-control' %>
+        </div>
+        <%= error_span(@user[:surname]) %>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <%= f.date_select :date_of_birth, :class => 'form-control' %>
+        </div>
+        <%= error_span(@user[:date_of_birth]) %>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <%= f.email_field :email, :class => 'form-control' %>
+        </div>
+        <%= error_span(@user[:email]) %>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <%= f.password_field :password, :class => 'form-control' %>
+        </div>
+        <%= error_span(@user[:password]) %>
+      </div>
 
-  <%= f.submit nil, :class => 'btn btn-primary' %>
-  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-            users_path, :class => 'btn btn-default' %>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")), users_path, :class => 'btn btn-default' %>
+
+     <br/>
+     <br/>
+   </div>
 
 <% end %>

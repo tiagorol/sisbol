@@ -1,6 +1,6 @@
 <%= bootstrap_form_for @round, :html => { :class => "form-horizontal round" } do |f| %>
 
-    <% if @round.errors.any? %>
+  <% if @round.errors.any? %>
     <div id="error_expl" class="panel panel-danger">
       <div class="panel-heading">
         <h3 class="panel-title"><%= pluralize(@round.errors.count, t(:error)) %> <%= t :warn_save %></h3>
@@ -15,22 +15,29 @@
     </div>
   <% end %>
 
-  <div class="control-group">
-    <div class="controls">
-      <%= f.text_field :name, :class => 'form-control' %>
-    </div>
-    <%= error_span(@round[:name]) %>
-  </div>
-  <div class="control-group">
-    <div class="controls">
-      <%= f.collection_select(:championship_id, @championships, :id, :name, prompt: t(:select)) %>
-    </div>
-    <%= error_span(@round[:championship_id]) %>
-  </div>
+  <div class="panel panel-default">
+      <div class="panel-heading">
+        Preencha os campos abaixo
+      </div><br/>
 
+      <div class="control-group">
+        <div class="controls">
+          <%= f.text_field :name, :class => 'form-control' %>
+        </div>
+        <%= error_span(@round[:name]) %>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <%= f.collection_select(:championship_id, @championships, :id, :name, prompt: t(:select)) %>
+        </div>
+        <%= error_span(@round[:championship_id]) %>
+      </div>
 
-  <%= f.submit nil, :class => 'btn btn-primary' %>
-  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-            rounds_path, :class => 'btn btn-default' %>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")), rounds_path, :class => 'btn btn-default' %>
+
+      <br/>
+      <br/>
+  </div>
 
 <% end %>

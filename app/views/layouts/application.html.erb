@@ -1,69 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Sisbol" %></title>
-    <%= csrf_meta_tags %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Bootstrap Admin Template : Binary Admin</title>
+  <!-- BOOTSTRAP STYLES-->
+  <link href="/assets/bootstrap.css" rel="stylesheet" />
+  <!-- FONTAWESOME STYLES-->
+  <link href="/assets/font-awesome.css" rel="stylesheet" />
+  <!-- MORRIS CHART STYLES-->
+  <link href="/assets/morris-0.4.3.min.css" rel="stylesheet" />
+  <!-- CUSTOM STYLES-->
+  <link href="/assets/custom.css" rel="stylesheet" />
+  <!-- GOOGLE FONTS-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body>
+<div id="wrapper">
+  <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html">Binary admin</a>
+    </div>
+    <div style="color: white;padding: 15px 50px 5px 50px;float: right;font-size: 16px;">
+      Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a>
+    </div>
+  </nav>
+  <nav class="navbar-default navbar-side" role="navigation">
+    <div class="sidebar-collapse">
+      <ul class="nav" id="main-menu">
+        <li class="text-center">
+          <img src="/assets/find_user.png" class="user-image img-responsive"/>
+        </li>
+        <li>
+          <a class="active-menu" href="/"><i class="fa fa-dashboard fa-3x"></i>Dashboard</a>
+        </li>
+        <li>
+          <a href="/championships"><i class="fa fa-desktop fa-3x"></i>Campeonato</a>
+        </li>
+        <li>
+          <a href="/rounds"><i class="fa fa-book fa-3x"></i>Rodada</a>
+        </li>
+        <li>
+          <a href="/teams"><i class="fa fa-file-text fa-3x"></i>Time</a>
+        </li>
+        <li>
+          <a href="/users"><i class="fa fa-user fa-3x"></i>Usuario</a>
+        </li>
+        <li>
+          <a  href="tab-panel.html"><i class="fa fa-key fa-3x"></i>Alterar Senha</a>
+        </li>
+      </ul>
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
-    <![endif]-->
+    </div>
 
-    <%= stylesheet_link_tag "application", :media => "all" %>
+  </nav>
 
-    <!-- For third-generation iPad with high-resolution Retina display: -->
-    <!-- Size should be 144 x 144 pixels -->
-    <%= favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144' %>
-
-    <!-- For iPhone with high-resolution Retina display: -->
-    <!-- Size should be 114 x 114 pixels -->
-    <%= favicon_link_tag 'apple-touch-icon-114x114-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114' %>
-
-    <!-- For first- and second-generation iPad: -->
-    <!-- Size should be 72 x 72 pixels -->
-    <%= favicon_link_tag 'apple-touch-icon-72x72-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72' %>
-
-    <!-- For non-Retina iPhone, iPod Touch, and Android 2.1+ devices: -->
-    <!-- Size should be 57 x 57 pixels -->
-    <%= favicon_link_tag 'apple-touch-icon-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png' %>
-
-    <!-- For all other devices -->
-    <!-- Size should be 32 x 32 pixels -->
-    <%= favicon_link_tag 'favicon.ico', :rel => 'shortcut icon' %>
-
-    <%= javascript_include_tag "application" %>
-  </head>
-  <body>
-    <nav class="navbar navbar-default navbar-static-top">
-      <div class="container">
-        <%=	link_to 'Sisbol', root_url , :class => 'navbar-brand'  %>
-      </div>
-    </nav>
-    <div class="container">
+  <div id="page-wrapper" >
+    <div id="page-inner">
       <div class="row">
-        <div class="col-md-2">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li><%=	link_to t(:'activerecord.models.championship'), championships_path  %></li>
-              <li><%=	link_to t(:'activerecord.models.round'), rounds_path %></li>
-              <li><%=	link_to t(:'activerecord.models.user'), users_path %></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
-        <div class="col-md-10">
-          <%= bootstrap_flash %>
+        <div class="col-md-12">
           <%= yield %>
         </div>
-      </div><!--/row-->
+      </div>
+      <hr />
+    </div>
+  </div>
+</div>
+<!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+<!-- JQUERY SCRIPTS -->
+<script src="/assets/jquery-1.10.2.js"></script>
+<!-- BOOTSTRAP SCRIPTS -->
+<script src="/assets/bootstrap.min.js"></script>
+<!-- METISMENU SCRIPTS -->
+<script src="/assets/jquery.metisMenu.js"></script>
+<!-- MORRIS CHART SCRIPTS -->
+<script src="/assets/raphael-2.1.0.min.js"></script>
+<script src="/assets/morris.js"></script>
+<!-- CUSTOM SCRIPTS -->
+<script src="/assets/custom.js"></script>
 
-      <footer>
-        <p>&copy; Sisbol Team 2015</p>
-      </footer>
-
-    </div> <!-- /container -->
-
-  </body>
+</body>
 </html>

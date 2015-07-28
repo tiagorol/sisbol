@@ -1,18 +1,15 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Team -%>
 
-<p>
-  <strong>Description:</strong>
-  <%= @team.description %>
-</p>
+<h2><%=t '.title', :default => model_class.model_name.human.titleize %></h2>
+<hr />
 
-<p>
-  <strong>Full description:</strong>
-  <%= @team.full_description %>
-</p>
-<p>
-  <strong>Crest:</strong>
-  <%= image_tag @team.crest.url(:thumb) %>
-</p>
+<dl class="dl-horizontal">
+  <dt><strong><%= model_class.human_attribute_name(:description) %>:</strong></dt>
+  <dd><%= @team.description %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:full_description) %>:</strong></dt>
+  <dd><%= @team.full_description %></dd>
+</dl>
 
-<%= link_to 'Edit', edit_team_path(@team) %> |
-<%= link_to 'Back', teams_path %>
+<%= link_to t('.back', :default => t("helpers.links.back")), teams_path, :class => 'btn btn-default'  %>
+<%= link_to t('.edit', :default => t("helpers.links.edit")), edit_team_path(@team), :class => 'btn btn-default' %>
+<%= link_to t('.destroy', :default => t("helpers.links.destroy")), team_path(@team), :method => 'delete', :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger' %>
