@@ -7,17 +7,17 @@
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
   <dd><%= @championship.name %></dd>
   <dt><strong><%= model_class.human_attribute_name(:start) %>:</strong></dt>
-  <dd><%= @championship.start %></dd>
+  <dd><%= l @championship.start %></dd>
   <dt><strong><%= model_class.human_attribute_name(:end) %>:</strong></dt>
-  <dd><%= @championship.end %></dd>
+  <dd><%= l @championship.end %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
-              championships_path, :class => 'btn btn-default'  %>
+              championships_path, :class => 'btn btn-default square-btn-adjust'  %>
 <%= link_to t('.edit', :default => t("helpers.links.edit")),
-              edit_championship_path(@championship), :class => 'btn btn-default' %>
+              edit_championship_path(@championship), :class => 'btn btn-default square-btn-adjust' %>
 <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
               championship_path(@championship),
               :method => 'delete',
               :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
-              :class => 'btn btn-danger' %>
+              :class => 'btn btn-danger square-btn-adjust' %>

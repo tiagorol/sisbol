@@ -21,6 +21,12 @@ ActiveRecord::Schema.define(version: 20150721012054) do
     t.datetime "updated_at",             null: false
   end
 
+  create_table "clubes", force: :cascade do |t|
+    t.string   "nome",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
   create_table "rounds", force: :cascade do |t|
     t.string   "name",            limit: 20, null: false
     t.datetime "created_at",                 null: false

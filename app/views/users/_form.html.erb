@@ -34,7 +34,7 @@
       </div>
       <div class="control-group">
         <div class="controls">
-          <%= f.date_select :date_of_birth, :class => 'form-control' %>
+          <%= f.date_field :date_of_birth, :class => 'form-control' %>
         </div>
         <%= error_span(@user[:date_of_birth]) %>
       </div>
@@ -51,8 +51,8 @@
         <%= error_span(@user[:password]) %>
       </div>
 
-      <%= f.submit nil, :class => 'btn btn-primary' %>
-      <%= link_to t('.cancel', :default => t("helpers.links.cancel")), users_path, :class => 'btn btn-default' %>
+      <%= f.submit nil, :class => 'btn btn-primary square-btn-adjust' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")), users_path, :class => 'btn btn-default square-btn-adjust' %>
 
      <br/>
      <br/>
