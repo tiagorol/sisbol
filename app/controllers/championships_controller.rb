@@ -4,7 +4,7 @@ class ChampionshipsController < ApplicationController
   # GET /championships
   # GET /championships.json
   def index
-    @championships = Championship.all.order(:name)
+    @championships = Championship.order(:name).paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /championships/1

@@ -54,3 +54,9 @@ gem 'bootstrap_form'
 
 # https://github.com/thoughtbot/paperclip
 gem 'paperclip', '~> 4.3'
+
+# Will Paginate - gem for paged search https://github.com/mislav/will_paginate/wiki/Installation
+gem 'will_paginate', '~> 3.0.5'
+
+# Bootstrap for will paginate - https://github.com/bootstrap-ruby/will_paginate-bootstrap
+gem 'will_paginate-bootstrap'

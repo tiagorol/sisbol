@@ -29,7 +29,7 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
+<div>
+  <%= will_paginate @teams, renderer: BootstrapPagination::Rails %>
+</div>
 <%= link_to t('.new', :default => t("helpers.links.new")), new_team_path, :class => 'btn btn-primary square-btn-adjust' %>

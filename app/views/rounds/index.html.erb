@@ -28,5 +28,7 @@
     <% end %>
   </tbody>
 </table>
-
+<div>
+  <%= will_paginate @rounds, renderer: BootstrapPagination::Rails %>
+</div>
 <%= link_to t('.new', :default => t("helpers.links.new")), new_round_path, :class => 'btn btn-primary square-btn-adjust' %>
