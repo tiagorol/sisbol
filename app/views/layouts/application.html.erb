@@ -25,10 +25,18 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Sisbol</a>
+      <a class="navbar-brand" href="/"><%= current_user.name %></a>
     </div>
+
     <div style="color: white;padding: 15px 50px 5px 50px;float: right;font-size: 16px;">
-      Last access : 30 May 2014 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a>
+      Last access : 30 May 2014 &nbsp;
+
+      <%= link_to "Sair",
+                  logout_path,
+                  :method => 'delete',
+                  :class => 'btn btn-danger square-btn-adjust' %>
+
+
     </div>
   </nav>
   <nav class="navbar-default navbar-side" role="navigation">
@@ -38,7 +46,7 @@
           <img src="/assets/find_user.png" class="user-image img-responsive"/>
         </li>
         <li>
-          <a class="active-menu" href="/"><i class="fa fa-dashboard fa-3x"></i>Dashboard</a>
+          <a href="/"><i class="fa fa-dashboard fa-3x"></i>Dashboard</a>
         </li>
         <li>
           <a href="/championships"><i class="fa fa-desktop fa-3x"></i>Campeonato</a>
@@ -72,6 +80,8 @@
     </div>
   </div>
 </div>
+
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
 <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
 <!-- JQUERY SCRIPTS -->
 <script src="/assets/jquery-1.10.2.js"></script>

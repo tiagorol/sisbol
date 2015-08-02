@@ -11,18 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150721012054) do
+ActiveRecord::Schema.define(version: 20150801205003) do
 
   create_table "championships", force: :cascade do |t|
     t.string   "name",       limit: 255, null: false
     t.date     "start",                  null: false
     t.date     "end",                    null: false
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-  end
-
-  create_table "clubes", force: :cascade do |t|
-    t.string   "nome",       limit: 255
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
@@ -48,13 +42,14 @@ ActiveRecord::Schema.define(version: 20150721012054) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name",          limit: 255
-    t.string   "surname",       limit: 255
+    t.string   "name",            limit: 255
+    t.string   "surname",         limit: 255
     t.date     "date_of_birth"
-    t.string   "email",         limit: 255
-    t.string   "password",      limit: 255
-    t.datetime "created_at",                null: false
-    t.datetime "updated_at",                null: false
+    t.string   "email",           limit: 255
+    t.string   "password",        limit: 255
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "password_digest", limit: 255
   end
 
   add_foreign_key "rounds", "championships"
