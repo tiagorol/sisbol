@@ -24,7 +24,7 @@
         <td><%=l championship.created_at.to_date %></td>
         <td>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_championship_path(championship), :class => 'btn btn-default btn-xs square-btn-adjust' %>
+                      edit_championship_path(championship), :class => 'btn btn-grey btn-xs square-btn-adjust' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       championship_path(championship),
                       :method => :delete,

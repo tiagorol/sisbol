@@ -22,7 +22,7 @@
         <td><%= team.full_description %></td>
         <td><%=l team.created_at.to_date %></td>
         <td>
-          <%= link_to t('.edit', :default => t("helpers.links.edit")), edit_team_path(team), :class => 'btn btn-default btn-xs square-btn-adjust' %>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")), edit_team_path(team), :class => 'btn btn-grey btn-xs square-btn-adjust' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")), team_path(team), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs btn-danger square-btn-adjust' %>
         </td>
       </tr>
