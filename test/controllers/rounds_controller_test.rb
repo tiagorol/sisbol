@@ -2,6 +2,7 @@ require 'test_helper'
 
 class RoundsControllerTest < ActionController::TestCase
   setup do
+    session[:user_id] = users(:one).id
     @round = rounds(:one)
     @championship = championships(:one)
   end
