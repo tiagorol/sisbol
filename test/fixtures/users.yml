@@ -1,15 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  surname: MyString
+  name: Joao
+  surname: da Silva
   date_of_birth: 2015-07-16
-  email: MyString
-  password: MyString
+  email: joao.silva@gmail.com
+  password: xyz123456
 
 two:
-  name: MyString
-  surname: MyString
+  name: Ze
+  surname: Carioca
   date_of_birth: 2015-07-16
-  email: MyString
-  password: MyString
+  email: ze.carioca@gmail.com
+  password: xyz123
