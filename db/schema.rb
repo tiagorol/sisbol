@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150801205003) do
+ActiveRecord::Schema.define(version: 20150810234608) do
+
+  create_table "accesses", force: :cascade do |t|
+    t.datetime "date",              null: false
+    t.integer  "user_id", limit: 4, null: false
+  end
+
+  add_index "accesses", ["user_id"], name: "index_accesses_on_user_id", using: :btree
 
   create_table "championships", force: :cascade do |t|
     t.string   "name",       limit: 255, null: false
@@ -52,5 +59,6 @@ ActiveRecord::Schema.define(version: 20150801205003) do
     t.string   "password_digest", limit: 255
   end
 
+  add_foreign_key "accesses", "users"
   add_foreign_key "rounds", "championships"
 end
