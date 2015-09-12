@@ -4,6 +4,9 @@ en:
   #E
   error: error
 
+  #L
+  last_access: Last Access
+
   #M
   message_updated: Record was successfully updated.
   message_created: Record was successfully created.

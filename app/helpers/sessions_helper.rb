@@ -4,7 +4,7 @@ module SessionsHelper
   def log_in(user)
     session[:user_id] = user.id
     session[:user_name] = user.name
-    save_last_acesss user
+    store_last_access_session user
   end
 
   # Returns the current logged-in user (if any).
@@ -21,7 +21,16 @@ module SessionsHelper
 
   private
 
-    def save_last_acesss user
+    def store_last_access_session user
+      access = Access.last
+      save_last_access user
+      if(access == nil)
+        access = Access.last
+      end
+      session[:last_access] = l(access.date, format: :long)
+    end
+
+    def save_last_access user
       access = Access.new(user_id: user.id, date: DateTime.now)
       access.save
     end
