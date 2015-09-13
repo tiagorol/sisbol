@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+
   root 'welcome#index'
 
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
+  get    'change_password'  => 'change_password#new'
+  post   'change_password'  => 'change_password#change'
 
   resources :championships
   resources :rounds

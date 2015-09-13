@@ -1,0 +1,35 @@
+<h2><%=t(:change_password) %></h2>
+<hr />
+
+<%= bootstrap_form_for :change_password, url: {action: "change"}, :html => { :class => "form-horizontal round" } do |f| %>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Preencha os campos abaixo
+      </div><br/>
+
+      <div class="control-group">
+        <div class="controls">
+          <%= f.password_field :current_password, label: t(:current_password), :class => 'form-control' %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <div class="controls">
+          <%= f.password_field :new_password, label: t(:new_password), :class => 'form-control' %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <div class="controls">
+          <%= f.password_field :confirmation_password, label: t(:confirmation_password), :class => 'form-control' %>
+        </div>
+      </div>
+
+      <%= f.submit t(:update), class: "btn btn-primary" %>
+
+      <br/>
+      <br/>
+    </div>
+
+<% end %>

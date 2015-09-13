@@ -1,16 +1,27 @@
 ---
 en:
 
+  #C
+  change_password: Change Password
+  current_password: Current Password
+  confirmation_password: Confirmation Password
+
   #E
   error: error
 
   #L
   last_access: Last Access
 
+  #N
+  new_password: New Password
+
   #M
   message_updated: Record was successfully updated.
   message_created: Record was successfully created.
   message_destroyed: Record was successfully destroyed.
+
+  #U
+  update: Update
 
   #W
   warn_save: prohibited this round from being saved

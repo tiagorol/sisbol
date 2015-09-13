@@ -1,24 +1,5 @@
 ---
 pt-BR:
-  breadcrumbs:
-    application:
-      root: Início
-    pages:
-      pages: Paginas
-  helpers:
-    actions: Ações
-    links:
-      back: Voltar
-      cancel: Cancelar
-      confirm: Você tem certeza?
-      destroy: Apagar
-      new: Novo
-      edit: Editar
-    titles:
-      edit: Editar %{model}
-      save: Salvar %{model}
-      new: Novo %{model}
-      delete: Apagar %{model}
 
   # formatos de data e hora
   date:
@@ -41,16 +22,27 @@ pt-BR:
     am: ''
     pm: ''
 
+  #C
+  change_password: Alterar Senha
+  current_password: Senha Atual
+  confirmation_password: Confirmação Senha
+
   #E
   error: Erro
 
   #L
   last_access: Último Acesso
 
+  #N
+  new_password: Nova Senha
+
   #M
   message_updated: Registro atualizado com sucesso.
   message_created: Registro criado com sucesso.
   message_destroyed: Registro excluído com sucesso.
+
+  #U
+  update: Atualizar
 
   #W
   warn_save: proíbe de salvar a informação
