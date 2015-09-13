@@ -2,8 +2,8 @@
 
 one:
   date: 2015-08-10 20:46:08
-  user_id: 
+  user: users(:one)
 
 two:
   date: 2015-08-10 20:46:08
-  user_id: 
+  user: users(:one)
