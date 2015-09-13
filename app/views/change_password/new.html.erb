@@ -3,6 +3,22 @@
 
 <%= bootstrap_form_for :change_password, url: {action: "change"}, :html => { :class => "form-horizontal round" } do |f| %>
 
+    <% if flash[:notice] %>
+        <div class="alert alert-info">
+          <% flash.each do |name, msg| -%>
+              <%= msg %>
+          <% end %>
+        </div>
+    <% end %>
+
+    <% if flash[:error] %>
+      <div class="alert alert-danger">
+        <% flash.each do |name, msg| -%>
+            <%= msg %>
+        <% end %>
+      </div>
+    <% end %>
+
     <div class="panel panel-default">
       <div class="panel-heading">
         Preencha os campos abaixo

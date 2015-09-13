@@ -37,9 +37,12 @@ pt-BR:
   new_password: Nova Senha
 
   #M
-  message_updated: Registro atualizado com sucesso.
-  message_created: Registro criado com sucesso.
-  message_destroyed: Registro excluído com sucesso.
+  message_updated: Registro atualizado com sucesso
+  message_created: Registro criado com sucesso
+  message_destroyed: Registro excluído com sucesso
+  message_validate_current_password: Senha atual inválida
+  message_validate_confirmation_password: Nova senha e confirmação de senha precisam ser iguais
+  message_validate_length_password: Senha deve ter entre 5 e 100 caracteres
 
   #U
   update: Atualizar
