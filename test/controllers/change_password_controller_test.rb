@@ -16,4 +16,10 @@ class ChangePasswordControllerTest < ActionController::TestCase
     assert_equal(User.find_by_email("joao.silva@gmail.com").password, "12345", "Nao alterou corretamente")
   end
 
+  test "should change password failure" do
+    post :change, change_password: {current_password: "xyz123", new_password: "12345", confirmation_password: "12345"}
+    assert_response :success
+    assert_not_equal(User.find_by_email("joao.silva@gmail.com").password, "12345", "Nao alterou corretamente")
+  end
+
 end
