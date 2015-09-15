@@ -1,3 +1,5 @@
+require 'digest/sha1'
+
 class User < ActiveRecord::Base
 
   validates :name, length: {minimum: 2, maximum: 30}, :presence => true
@@ -8,6 +10,6 @@ class User < ActiveRecord::Base
   validates_confirmation_of :password
 
   def authenticate(password)
-    self.password.eql?password
+    self.password.eql?Digest::SHA1.hexdigest(password)
   end
 end

@@ -12,8 +12,6 @@
   <dd><%= l @user.date_of_birth %></dd>
   <dt><strong><%= model_class.human_attribute_name(:email) %>:</strong></dt>
   <dd><%= @user.email %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:password) %>:</strong></dt>
-  <dd><%= @user.password %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),
