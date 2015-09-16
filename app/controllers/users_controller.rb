@@ -28,6 +28,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     @user.password = Digest::SHA1.hexdigest(@user.password)
+    @user.password_confirmation = Digest::SHA1.hexdigest(@user.password_confirmation)
 
     respond_to do |format|
       if @user.save
@@ -72,6 +73,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :surname, :date_of_birth, :email, :password)
+      params.require(:user).permit(:name, :surname, :date_of_birth, :email, :password, :password_confirmation)
     end
 end
