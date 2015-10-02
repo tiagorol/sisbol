@@ -56,7 +56,11 @@ class ChampionshipsController < ApplicationController
   def destroy
     @championship.destroy
     respond_to do |format|
-      format.html { redirect_to championships_url, notice: t(:message_destroyed) }
+      if @championship.destroyed?
+        format.html { redirect_to championships_url, notice: t(:message_destroyed)}
+      end
+      # flash[:error] = @championship.errors.full_messages.to_sentence
+      format.html { redirect_to championships_url, alert: @championship.errors.full_messages.to_sentence}
       format.json { head :no_content }
     end
   end

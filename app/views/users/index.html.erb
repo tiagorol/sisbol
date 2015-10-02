@@ -3,6 +3,22 @@
 <h2><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h2>
 <hr />
 
+<% if flash[:notice] %>
+    <div class="alert alert-info">
+      <% flash.each do |name, msg| -%>
+          <%= msg %>
+      <% end %>
+    </div>
+<% end %>
+
+<% if flash[:alert] %>
+    <div class="alert alert-danger">
+      <% flash.each do |name, msg| -%>
+          <%= msg %>
+      <% end %>
+    </div>
+<% end %>
+
 <table class="table table-striped">
   <thead>
     <tr>

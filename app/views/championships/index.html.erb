@@ -3,6 +3,22 @@
 <h2><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h2>
 <hr />
 
+<% if flash[:notice] %>
+    <div class="alert alert-info">
+      <% flash.each do |name, msg| -%>
+          <%= msg %>
+      <% end %>
+    </div>
+<% end %>
+
+<% if flash[:alert] %>
+    <div class="alert alert-danger">
+      <% flash.each do |name, msg| -%>
+          <%= msg %>
+      <% end %>
+    </div>
+<% end %>
+
 <table class="table table-striped">
   <thead>
     <tr>
@@ -28,7 +44,7 @@
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       championship_path(championship),
                       :method => :delete,
-                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm")) },
                       :class => 'btn btn-xs btn-danger square-btn-adjust' %>
         </td>
       </tr>
