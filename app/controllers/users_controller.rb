@@ -45,7 +45,7 @@ class UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
     respond_to do |format|
-      if @user.update(user_params)
+      if @user.update(user_params_update)
         format.html { redirect_to @user, notice: t(:message_updated) }
         format.json { render :show, status: :ok, location: @user }
       else
@@ -66,6 +66,19 @@ class UsersController < ApplicationController
   end
 
   private
+
+    def user_params_update
+      password = params[:user][:password]
+      if password.blank?
+        password = @user.password
+        password_confirmation = @user.password
+      else
+        password = Digest::SHA1.hexdigest(params[:user][:password])
+        password_confirmation = Digest::SHA1.hexdigest(params[:user][:password_confirmation])
+      end
+      params.require(:user).permit(:name, :surname, :date_of_birth, :email, :password, :password_confirmation, :avatar).merge(password: password, password_confirmation: password_confirmation)
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])

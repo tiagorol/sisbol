@@ -4,6 +4,7 @@ module SessionsHelper
   def log_in(user)
     session[:user_id] = user.id
     session[:user_name] = user.name
+    session[:url_avatar] = user.url_avatar
     store_last_access_session user
   end
 

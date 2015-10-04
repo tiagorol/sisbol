@@ -11,6 +11,13 @@ class User < ActiveRecord::Base
   has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
+  def url_avatar
+    if self.avatar_file_name.nil?
+      return "find_user.png"
+    end
+    return self.avatar.url(:medium)
+  end
+
   def url_avatar_thumb
     if self.avatar_file_name.nil?
       return "find_user_thumb.png"
