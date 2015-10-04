@@ -19,6 +19,8 @@
     </div>
 <% end %>
 
+<%= image_tag @user.url_avatar_thumb %>
+
 <dl class="dl-horizontal">
   <dt><strong><%= model_class.human_attribute_name(:name) %>:</strong></dt>
   <dd><%= @user.name %></dd>

@@ -1,4 +1,4 @@
-<%= bootstrap_form_for @user, :html => { :class => "form-horizontal user" } do |f| %>
+<%= bootstrap_form_for @user, :html => { :class => "form-horizontal user", :multipart => true } do |f| %>
 
     <% if @user.errors.any? %>
     <div id="error_expl" class="panel panel-danger">
@@ -55,6 +55,12 @@
           <%= f.password_field :password_confirmation, :class => 'form-control' %>
         </div>
         <%= error_span(@user[:password_confirmation]) %>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <%= f.file_field :avatar, :class => 'form-control' %>
+        </div>
+        <%= error_span(@user[:avatar]) %>
       </div>
 
       <%= f.submit nil, :class => 'btn btn-primary square-btn-adjust' %>
