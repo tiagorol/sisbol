@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151003173520) do
+ActiveRecord::Schema.define(version: 20151006235118) do
 
   create_table "accesses", force: :cascade do |t|
     t.datetime "date",              null: false
@@ -38,8 +38,8 @@ ActiveRecord::Schema.define(version: 20151003173520) do
   add_index "rounds", ["championship_id"], name: "index_rounds_on_championship_id", using: :btree
 
   create_table "teams", force: :cascade do |t|
-    t.string   "description",        limit: 100
-    t.string   "full_description",   limit: 255
+    t.string   "description",        limit: 60,  null: false
+    t.string   "full_description",   limit: 100, null: false
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
     t.string   "crest_file_name",    limit: 255
