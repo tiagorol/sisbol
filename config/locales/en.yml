@@ -5,15 +5,19 @@ en:
   change_password: Change Password
   current_password: Current Password
   confirmation_password: Confirmation Password
+  championship: Championship
+
+  #D
+  dashboard: Dashboard
 
   #E
   error: error
 
+  #I
+  invalid_login: Email or password invalid
+
   #L
   last_access: Last Access
-
-  #N
-  new_password: New Password
 
   #M
   message_updated: Record was successfully updated
@@ -23,12 +27,29 @@ en:
   message_validate_confirmation_password: New password and password confirmation must match
   message_validate_length_password: Password must be between 5 and 100 characters
 
+  #N
+  new_password: New Password
+
+  #P
+  panel_form: Preencha os campos abaixo
+
+  #R
+  round: Round
+
+  #S
+  sisbol: Sisbol
+
+  #T
+  team: Time
+
   #U
   update: Update
+  user: User
 
   #W
   warn_save: prohibited this round from being saved
   welcome_message: Welcome Bolao
+  welcome_message_h5: Your system online guesses
 
 
 

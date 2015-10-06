@@ -26,15 +26,19 @@ pt-BR:
   change_password: Alterar Senha
   current_password: Senha Atual
   confirmation_password: Confirmação Senha
+  championship: Campeonato
+
+  #D
+  dashboard: Dashboard
 
   #E
   error: Erro
 
+  #I
+  invalid_login: Email ou senha inválidos
+
   #L
   last_access: Último Acesso
-
-  #N
-  new_password: Nova Senha
 
   #M
   message_updated: Registro atualizado com sucesso
@@ -44,9 +48,26 @@ pt-BR:
   message_validate_confirmation_password: Nova senha e confirmação de senha precisam ser iguais
   message_validate_length_password: Senha deve ter entre 5 e 100 caracteres
 
+  #N
+  new_password: Nova Senha
+
+  #P
+  panel_form: Preencha os campos abaixo
+
+  #R
+  round: Rodada
+
+  #S
+  sisbol: Sisbol
+
+  #T
+  team: Time
+
   #U
   update: Atualizar
+  user: Usuário
 
   #W
   warn_save: proíbe de salvar a informação
   welcome_message: Bem vindo ao Bolão
+  welcome_message_h5: Seu sistema de palpites online

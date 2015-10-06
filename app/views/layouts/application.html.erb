@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>:: Sisbol ::</title>
+  <title>:: <%= t(:sisbol) %> ::</title>
   <!-- BOOTSTRAP STYLES-->
   <link href="/assets/bootstrap.css" rel="stylesheet" />
   <!-- FONTAWESOME STYLES-->
@@ -46,22 +46,22 @@
           <%= image_tag session[:url_avatar], class: "user-image img-responsive" %>
         </li>
         <li>
-          <a href="/"><i class="fa fa-dashboard fa-3x"></i>Dashboard</a>
+          <a href="/"><i class="fa fa-dashboard fa-3x"></i><%= t(:dashboard) %></a>
         </li>
         <li>
-          <a href="/championships"><i class="fa fa-desktop fa-3x"></i>Campeonato</a>
+          <a href="/championships"><i class="fa fa-desktop fa-3x"></i><%= t(:championship) %></a>
         </li>
         <li>
-          <a href="/rounds"><i class="fa fa-book fa-3x"></i>Rodada</a>
+          <a href="/rounds"><i class="fa fa-book fa-3x"></i><%= t(:round) %></a>
         </li>
         <li>
-          <a href="/teams"><i class="fa fa-file-text fa-3x"></i>Time</a>
+          <a href="/teams"><i class="fa fa-file-text fa-3x"></i><%= t(:team) %></a>
         </li>
         <li>
-          <a href="/users"><i class="fa fa-user fa-3x"></i>Usuario</a>
+          <a href="/users"><i class="fa fa-user fa-3x"></i><%= t(:user) %></a>
         </li>
         <li>
-          <a  href="/change_password"><i class="fa fa-key fa-3x"></i>Alterar Senha</a>
+          <a  href="/change_password"><i class="fa fa-key fa-3x"></i><%= t(:change_password) %></a>
         </li>
       </ul>
 
