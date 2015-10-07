@@ -23,6 +23,7 @@
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:crest) %></th>
       <th><%= model_class.human_attribute_name(:description) %></th>
       <th><%= model_class.human_attribute_name(:full_description) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
@@ -34,6 +35,7 @@
     <% @teams.each do |team| %>
       <tr>
         <td><%= link_to team.id, team_path(team) %></td>
+        <td><%= image_tag team.url_crest_small %></td>
         <td><%= team.description %></td>
         <td><%= team.full_description %></td>
         <td><%=l team.created_at.to_date %></td>
