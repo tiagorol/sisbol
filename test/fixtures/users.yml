@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   name: Joao
   surname: da Silva
   date_of_birth: 2015-07-16
@@ -8,6 +9,7 @@ one:
   password: xyz123456
 
 two:
+  id: 2
   name: Ze
   surname: Carioca
   date_of_birth: 2015-07-16

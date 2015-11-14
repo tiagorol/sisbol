@@ -1,0 +1,71 @@
+<%= bootstrap_form_for @match, :html => { :class => "form-horizontal round" } do |f| %>
+    <% if @match.errors.any? %>
+        <div id="error_expl" class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title"><%= pluralize(@match.errors.count, t(:error)) %> <%= t :warn_save %></h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <% @match.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+    <% end %>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        Preencha os campos abaixo
+      </div><br/>
+
+      <div class="control-group">
+        <div class="controls">
+          <%= f.collection_select(:championship_id, @championships, :id, :name, prompt: t(:select)) %>
+        </div>
+        <%= error_span(@match[:championship_id]) %>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <%= f.collection_select(:round_id, @rounds, :id, :name, prompt: t(:select)) %>
+        </div>
+        <%= error_span(@match[:round_id]) %>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <%= f.collection_select(:home_team_id, @teams, :id, :description, prompt: t(:select)) %>
+        </div>
+        <%= error_span(@match[:home_team_id]) %>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <%= f.collection_select(:away_team_id, @teams, :id, :description, prompt: t(:select)) %>
+        </div>
+        <%= error_span(@match[:away_team_id]) %>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <%= f.number_field :goals_home_team, :class => 'form-control' %>
+        </div>
+        <%= error_span(@match[:goals_home_team]) %>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <%= f.number_field :goals_away_team, :class => 'form-control' %>
+        </div>
+        <%= error_span(@match[:goals_away_team]) %>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <%= f.date_field :day_of_match, :class => 'form-control' %>
+        </div>
+        <%= error_span(@match[:day_of_match]) %>
+      </div>
+
+      <%= f.submit nil, :class => 'btn btn-primary square-btn-adjust' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")), matches_path, :class => 'btn btn-grey square-btn-adjust' %>
+
+      <br/>
+      <br/>
+    </div>
+<% end %>

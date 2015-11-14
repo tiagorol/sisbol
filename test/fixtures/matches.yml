@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: 1
+  championship_id: 1
+  round_id: 1
+  goals_home_team: 3
+  goals_away_team: 1
+  home_team_id: 1
+  away_team_id: 2
+  day_of_match: 2015-07-05
+
+two:
+  id: 2
+  championship_id: 2
+  round_id: 2
+  goals_home_team: 3
+  goals_away_team: 1
+  home_team_id: 1
+  away_team_id: 2
+  day_of_match: 2015-07-05

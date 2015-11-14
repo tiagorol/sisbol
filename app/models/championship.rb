@@ -13,6 +13,7 @@ class Championship < ActiveRecord::Base
       else
         errors[:base] = I18n.translate('.errors.messages.restrict_dependent_destroy.many', :record => rounds.size)
       end
+
       return false
     end
   end

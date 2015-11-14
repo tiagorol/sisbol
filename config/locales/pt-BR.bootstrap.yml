@@ -26,6 +26,7 @@ pt-BR:
       round: Rodada
       user: Usuário
       team: Time
+      match: Partida
     attributes:
       championship:
         name: Nome
@@ -49,3 +50,11 @@ pt-BR:
         full_description: Descrição Completa
         created_at: Criado em
         crest: Escudo
+      match:
+        championship_id: Campeonato
+        round_id: Rodada
+        goals_home_team: Gols do time da casa
+        goals_away_team: Gols do time visitante
+        day_of_match: Dia da partida
+        home_team_id: Time da casa
+        away_team_id: Time visitante

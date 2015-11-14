@@ -7,13 +7,15 @@
   <!-- BOOTSTRAP STYLES-->
   <link href="/assets/bootstrap.css" rel="stylesheet" />
   <!-- FONTAWESOME STYLES-->
-  <link href="/assets/font-awesome.css" rel="stylesheet" />
+  <!--<link href="/assets/font-awesome.css" rel="stylesheet" />-->
   <!-- MORRIS CHART STYLES-->
   <link href="/assets/morris-0.4.3.min.css" rel="stylesheet" />
   <!-- CUSTOM STYLES-->
   <link href="/assets/custom.css" rel="stylesheet" />
   <!-- GOOGLE FONTS-->
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
 <body>
 <div id="wrapper">
@@ -46,22 +48,25 @@
           <%= image_tag session[:url_avatar], class: "user-image img-responsive" %>
         </li>
         <li>
-          <a href="/"><i class="fa fa-dashboard fa-3x"></i><%= t(:dashboard) %></a>
+          <a href="/"><i class="fa fa-home fa-3x"></i><%= t(:dashboard) %></a>
         </li>
         <li>
           <a href="/championships"><i class="fa fa-desktop fa-3x"></i><%= t(:championship) %></a>
         </li>
         <li>
-          <a href="/rounds"><i class="fa fa-book fa-3x"></i><%= t(:round) %></a>
+          <a href="/rounds"><i class="fa fa-bookmark-o fa-3x"></i><%= t(:round) %></a>
         </li>
         <li>
-          <a href="/teams"><i class="fa fa-file-text fa-3x"></i><%= t(:team) %></a>
+          <a href="/teams"><i class="fa fa-shield fa-3x"></i><%= t(:team) %></a>
         </li>
         <li>
           <a href="/users"><i class="fa fa-user fa-3x"></i><%= t(:user) %></a>
         </li>
         <li>
           <a  href="/change_password"><i class="fa fa-key fa-3x"></i><%= t(:change_password) %></a>
+        </li>
+        <li>
+          <a  href="/matches"><i class="fa fa-futbol-o fa-3x"></i>Partidas</a>
         </li>
       </ul>
 

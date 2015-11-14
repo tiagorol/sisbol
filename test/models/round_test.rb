@@ -20,13 +20,13 @@ class RoundTest < ActiveSupport::TestCase
   end
 
   test "Destroy" do
-    round = Round.find_by(name: "Rodada 1")
+    round = Round.find_by(name: "Rodada 3")
     round.destroy
-    assert_equal(Round.all.size, 1, "Nao excluiu corretamente");
+    assert_equal(Round.all.size, 2, "Nao excluiu corretamente");
   end
 
   test "Find All" do
-    assert_equal(Round.all.size, 2, "Nao buscou corretamente")
+    assert_equal(Round.all.size, 3, "Nao buscou corretamente")
   end
 
 end

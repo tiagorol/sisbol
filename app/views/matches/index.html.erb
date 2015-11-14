@@ -1,0 +1,66 @@
+<%- model_class = Match -%>
+
+<h2><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h2>
+<hr />
+
+<% if flash[:notice] %>
+    <div class="alert alert-info">
+      <% flash.each do |name, msg| -%>
+          <%= msg %>
+      <% end %>
+    </div>
+<% end %>
+
+<% if flash[:alert] %>
+    <div class="alert alert-danger">
+      <% flash.each do |name, msg| -%>
+          <%= msg %>
+      <% end %>
+    </div>
+<% end %>
+
+<table class="table table-striped">
+  <thead>
+  <tr>
+    <th><%= model_class.human_attribute_name(:id) %></th>
+    <th><%= model_class.human_attribute_name(:championship) %></th>
+    <th><%= model_class.human_attribute_name(:round) %></th>
+    <th><%= model_class.human_attribute_name(:home_team) %></th>
+    <th><%= model_class.human_attribute_name(:away_team) %></th>
+    <th><%= model_class.human_attribute_name(:goals_home_team) %></th>
+    <th><%= model_class.human_attribute_name(:goals_away_team) %></th>
+    <th><%= model_class.human_attribute_name(:day_of_match) %></th>
+    <th><%=t '.actions', :default => t("helpers.actions") %></th>
+  </tr>
+  </thead>
+  <tbody>
+
+  <% @matches.each do |match| %>
+      <tr>
+        <td><%= link_to match.id, match_path(match) %></td>
+        <td><%= match.championship.name %></td>
+        <td><%= match.round.name %></td>
+        <td><%= match.home_team.description %></td>
+        <td><%= match.away_team.description %></td>
+        <td><%= match.goals_home_team %></td>
+        <td><%= match.goals_away_team %></td>
+        <td><%= l match.day_of_match %></td>
+        <td>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_match_path(match), :class => 'btn btn-grey btn-xs square-btn-adjust' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      match_path(match),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm")) },
+                      :class => 'btn btn-xs btn-danger square-btn-adjust' %>
+        </td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+<div>
+  <%= will_paginate @matches, renderer: BootstrapPagination::Rails %>
+</div>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_match_path,
+            :class => 'btn btn-primary square-btn-adjust' %>

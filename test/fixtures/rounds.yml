@@ -1,8 +1,14 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   name: Rodada 1
-  championship: championships(:one)
+  championship_id: 1
 two:
+  id: 2
   name: Quartas de Final
-  championship: championships(:two)
+  championship_id: 2
+three:
+  id: 3
+  name: Rodada 3
+  championship_id: 2

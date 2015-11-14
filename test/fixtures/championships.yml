@@ -1,11 +1,19 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   name: Campeonato Brasileiro 2015
   start: 2015-07-05
   end: 2015-07-05
 
 two:
+  id: 2
   name: Copa America 2015
+  start: 2015-07-05
+  end: 2015-07-05
+
+three:
+  id: 3
+  name: Copa do Nordeste 2015
   start: 2015-07-05
   end: 2015-07-05

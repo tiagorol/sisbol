@@ -19,12 +19,12 @@ class ChampionshipTest < ActiveSupport::TestCase
   end
 
   test "Destroy" do
-    championship = Championship.find_by(name: "Campeonato Brasileiro 2015")
+    championship = Championship.find_by(name: "Copa do Nordeste 2015")
     championship.destroy
-    assert_equal(Championship.all.size, 1, "Nao excluiu corretamente");
+    assert_equal(Championship.all.size, 2, "Nao excluiu corretamente");
   end
 
   test "Find All" do
-    assert_equal(Championship.all.size, 2, "Nao buscou corretamente")
+    assert_equal(Championship.all.size, 3, "Nao buscou corretamente")
   end
 end

@@ -28,6 +28,23 @@ ActiveRecord::Schema.define(version: 20151006235118) do
     t.datetime "updated_at",             null: false
   end
 
+  create_table "matches", force: :cascade do |t|
+    t.integer  "championship_id", limit: 4
+    t.integer  "round_id",        limit: 4
+    t.integer  "goals_home_team", limit: 4
+    t.integer  "goals_away_team", limit: 4
+    t.date     "day_of_match"
+    t.integer  "home_team_id",    limit: 4
+    t.integer  "away_team_id",    limit: 4
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
+
+  add_index "matches", ["away_team_id"], name: "index_matches_on_away_team_id", using: :btree
+  add_index "matches", ["championship_id"], name: "index_matches_on_championship_id", using: :btree
+  add_index "matches", ["home_team_id"], name: "index_matches_on_home_team_id", using: :btree
+  add_index "matches", ["round_id"], name: "index_matches_on_round_id", using: :btree
+
   create_table "rounds", force: :cascade do |t|
     t.string   "name",            limit: 20, null: false
     t.datetime "created_at",                 null: false
@@ -65,5 +82,9 @@ ActiveRecord::Schema.define(version: 20151006235118) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
   add_foreign_key "accesses", "users"
+  add_foreign_key "matches", "championships"
+  add_foreign_key "matches", "rounds"
+  add_foreign_key "matches", "teams", column: "away_team_id", name: "away_team_id"
+  add_foreign_key "matches", "teams", column: "home_team_id", name: "home_team_id"
   add_foreign_key "rounds", "championships"
 end
