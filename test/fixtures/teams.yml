@@ -4,8 +4,11 @@ one:
   id: 1
   description: Ceara
   full_description: Ceara Sporting Club
-
 two:
   id: 2
   description: Sport
   full_description: Sport Club do Recife
+three:
+  id: 3
+  description: Icasa
+  full_description: Associacao Desportiva Recreativa Cultural Icasa
