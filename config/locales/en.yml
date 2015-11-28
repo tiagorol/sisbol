@@ -26,6 +26,7 @@ en:
   message_validate_current_password: Invalid current password
   message_validate_confirmation_password: New password and password confirmation must match
   message_validate_length_password: Password must be between 5 and 100 characters
+  message_permission_admin: You are not allowed to access this feature
 
   #N
   new_password: New Password

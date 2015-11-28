@@ -1,4 +1,5 @@
 class MatchesController < ApplicationController
+  before_filter :has_permission_admin
   before_action :set_match, only: [:show, :edit, :update, :destroy]
   before_action :load_championships, only: [:new, :edit, :create, :update]
   before_action :load_rounds, only: [:new, :edit, :create, :update]

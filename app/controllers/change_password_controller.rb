@@ -1,3 +1,5 @@
+require 'digest/sha1'
+
 class ChangePasswordController < ApplicationController
   before_action :validate_current_password, only: [:change]
   before_action :validate_password, only: [:change]
@@ -8,7 +10,8 @@ class ChangePasswordController < ApplicationController
 
   def change
     new_password = params[:change_password][:new_password]
-    @user.update(password: new_password)
+    @user.password_confirmation = Digest::SHA1.hexdigest(new_password)
+    @user.update(password: Digest::SHA1.hexdigest(new_password))
     flash.now[:notice] = t(:message_updated)
     render 'new'
   end
@@ -19,7 +22,7 @@ class ChangePasswordController < ApplicationController
       new_password = params[:change_password][:new_password]
 
       if new_password.length < 5 || new_password.length > 100
-        flash.now[:error] = t(:message_validate_length_password)
+        flash.now[:alert] = t(:message_validate_length_password)
         render 'new'
       end
     end
@@ -29,7 +32,7 @@ class ChangePasswordController < ApplicationController
       confirmation_password = params[:change_password][:confirmation_password]
 
       if !new_password.eql?confirmation_password
-        flash.now[:error] = t(:message_validate_confirmation_password)
+        flash.now[:alert] = t(:message_validate_confirmation_password)
         render 'new'
       end
     end
@@ -39,7 +42,7 @@ class ChangePasswordController < ApplicationController
       @user = User.find(session[:user_id])
 
       if !@user.authenticate(current_password)
-        flash.now[:error] = t(:message_validate_current_password)
+        flash.now[:alert] = t(:message_validate_current_password)
         render 'new'
       end
     end

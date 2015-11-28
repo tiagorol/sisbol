@@ -1,2 +1,18 @@
 <h2><%= t(:welcome_message) %></h2>
 <h5><%= t(:welcome_message_h5) %></h5>
+
+<% if flash[:notice] %>
+    <div class="alert alert-info">
+      <% flash.each do |name, msg| -%>
+          <%= msg %>
+      <% end %>
+    </div>
+<% end %>
+
+<% if flash[:alert] %>
+    <div class="alert alert-danger">
+      <% flash.each do |name, msg| -%>
+          <%= msg %>
+      <% end %>
+    </div>
+<% end %>

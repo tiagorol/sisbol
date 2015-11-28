@@ -1,4 +1,5 @@
 class TeamsController < ApplicationController
+  before_filter :has_permission_admin
   before_action :set_team, only: [:show, :edit, :update, :destroy]
 
   # GET /teams

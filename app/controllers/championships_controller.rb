@@ -1,4 +1,5 @@
 class ChampionshipsController < ApplicationController
+  before_filter :has_permission_admin
   before_action :set_championship, only: [:show, :edit, :update, :destroy]
 
   # GET /championships

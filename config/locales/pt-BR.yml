@@ -49,6 +49,7 @@ pt-BR:
   message_validate_length_password: Senha deve ter entre 5 e 100 caracteres
   message_validate_distinct_teams: Os times não podem ser iguais
   message_validate_championship_has_round: A rodada não pretence a esse campeonato
+  message_permission_admin: Você não tem permissão para acesar esse recurso
 
   #N
   new_password: Nova Senha

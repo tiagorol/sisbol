@@ -60,3 +60,6 @@ gem 'will_paginate', '~> 3.0.5'
 
 # Bootstrap for will paginate - https://github.com/bootstrap-ruby/will_paginate-bootstrap
 gem 'will_paginate-bootstrap'
+
+#Minimal authorization through OO design and pure Ruby classes - https://github.com/elabs/pundit
+gem 'pundit'

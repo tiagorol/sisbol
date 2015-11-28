@@ -1,6 +1,7 @@
 require 'digest/sha1'
 
 class User < ActiveRecord::Base
+  enum role: [:normal_user, :admin]
 
   validates :name, length: {minimum: 2, maximum: 30}, :presence => true
   validates :surname, length: {minimum: 2, maximum: 30}, :presence => true

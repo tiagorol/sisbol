@@ -1,6 +1,7 @@
 require 'digest/sha1'
 
 class UsersController < ApplicationController
+  before_filter :has_permission_admin
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users

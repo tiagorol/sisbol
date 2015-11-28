@@ -5,6 +5,8 @@ module SessionsHelper
     session[:user_id] = user.id
     session[:user_name] = user.name
     session[:url_avatar] = user.url_avatar
+    session[:role] = user.role
+    @current_user = user
     store_last_access_session user
   end
 
