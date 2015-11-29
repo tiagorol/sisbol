@@ -83,6 +83,12 @@
             </li>
         <% end %>
 
+        <% if user_admin %>
+            <li>
+              <a href="/disputes"><i class="fa fa-user fa-3x"></i><%= t(:dispute) %></a>
+            </li>
+        <% end %>
+
         <li>
           <a  href="/change_password"><i class="fa fa-key fa-3x"></i><%= t(:change_password) %></a>
         </li>

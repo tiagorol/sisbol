@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :disputes
   resources :matches
   root 'welcome#index'
 

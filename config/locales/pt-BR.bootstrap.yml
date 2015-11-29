@@ -27,6 +27,7 @@ pt-BR:
       user: Usuário
       team: Time
       match: Partida
+      dispute: Bolão
     attributes:
       championship:
         name: Nome
@@ -58,3 +59,7 @@ pt-BR:
         day_of_match: Dia da partida
         home_team_id: Time da casa
         away_team_id: Time visitante
+      dispute:
+        description: Descrição
+        status: Status
+        championship_id: Campeonato

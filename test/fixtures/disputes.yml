@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  status: 1
+  championship_id: 
+
+two:
+  description: MyString
+  status: 1
+  championship_id: 

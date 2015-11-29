@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151128101331) do
+ActiveRecord::Schema.define(version: 20151128135311) do
 
   create_table "accesses", force: :cascade do |t|
     t.datetime "date",              null: false
@@ -27,6 +27,16 @@ ActiveRecord::Schema.define(version: 20151128101331) do
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
   end
+
+  create_table "disputes", force: :cascade do |t|
+    t.string   "description",     limit: 60,             null: false
+    t.integer  "status",          limit: 4,  default: 0, null: false
+    t.integer  "championship_id", limit: 4,              null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
+  end
+
+  add_index "disputes", ["championship_id"], name: "index_disputes_on_championship_id", using: :btree
 
   create_table "matches", force: :cascade do |t|
     t.integer  "championship_id", limit: 4
@@ -83,6 +93,7 @@ ActiveRecord::Schema.define(version: 20151128101331) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
   add_foreign_key "accesses", "users"
+  add_foreign_key "disputes", "championships"
   add_foreign_key "matches", "championships"
   add_foreign_key "matches", "rounds"
   add_foreign_key "matches", "teams", column: "away_team_id", name: "away_team_id"

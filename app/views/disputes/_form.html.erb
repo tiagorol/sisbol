@@ -1,0 +1,43 @@
+<%= bootstrap_form_for @dispute, :html => { :class => "form-horizontal dispute" } do |f| %>
+
+    <% if @dispute.errors.any? %>
+        <div id="error_expl" class="panel panel-danger">
+          <div class="panel-heading">
+            <h3 class="panel-title"><%= pluralize(@dispute.errors.count, t(:error)) %> <%= t :warn_save %></h3>
+          </div>
+          <div class="panel-body">
+            <ul>
+              <% @dispute.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+    <% end %>
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <%= t :panel_form %>
+      </div><br/>
+
+      <div class="control-group">
+        <div class="controls">
+          <%= f.text_field :description, :class => 'form-control' %>
+        </div>
+        <%= error_span(@dispute[:description]) %>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <%= f.collection_select(:championship_id, @championships, :id, :name, prompt: t(:select)) %>
+        </div>
+        <%= error_span(@dispute[:championship_id]) %>
+      </div>
+
+      <%= f.submit nil, :class => 'btn btn-primary square-btn-adjust' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")), disputes_path, :class => 'btn btn-grey square-btn-adjust' %>
+
+      <br/>
+      <br/>
+    </div>
+
+<% end %>
